@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewpor" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Bangun Datar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Kalkulator Bangun Datar</h1>
+    <nav>
+      <button onclick="tampilkan('segitiga')">Segitiga</button>
+      <button onclick="tampilkan('persegi')">Persegi Panjang</button>
+      <button onclick="tampilkan('lingkaran')">Lingkaran</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SEGITIGA -->
+    <section id="segitiga" class="bangun-section">
+      <h2>Segitiga</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Luas</h3>
+          <label>Alas:</label>
+          <input type="number" id="alasSegitiga" />
+          <label>Tinggi:</label>
+          <input type="number" id="tinggiSegitiga" />
+          <button onclick="hitungLuasSegitiga()">Hitung</button>
+          <p id="hasilLuasSegitiga"></p>
+          <p id="errorLuasSegitiga" class="error"></p>
+        </div>
+        <div>
+          <h3>Keliling</h3>
+          <label>Sisi A:</label>
+          <input type="number" id="sisiA" />
+          <label>Sisi B:</label>
+          <input type="number" id="sisiB" />
+          <label>Sisi C:</label>
+          <input type="number" id="sisiC" />
+          <button onclick="hitungKelilingSegitiga()">Hitung</button>
+          <p id="hasilKelilingSegitiga"></p>
+          <p id="errorKelilingSegitiga" class="error"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSEGI PANJANG -->
+    <section id="persegi" class="bangun-section hidden">
+      <h2>Persegi Panjang</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Luas</h3>
+          <label>Panjang:</label>
+          <input type="number" id="panjang" />
+          <label>Lebar:</label>
+          <input type="number" id="lebar" />
+          <button onclick="hitungLuasPersegi()">Hitung</button>
+          <p id="hasilLuasPersegi"></p>
+          <p id="errorLuasPersegi" class="error"></p>
+        </div>
+        <div>
+          <h3>Keliling</h3>
+          <label>Panjang:</label>
+          <input type="number" id="kelPanjang" />
+          <label>Lebar:</label>
+          <input type="number" id="kelLebar" />
+          <button onclick="hitungKelilingPersegi()">Hitung</button>
+          <p id="hasilKelilingPersegi"></p>
+          <p id="errorKelilingPersegi" class="error"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINGKARAN -->
+    <section id="lingkaran" class="bangun-section hidden">
+      <h2>Lingkaran</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Luas</h3>
+          <label>Jari-jari:</label>
+          <input type="number" id="jariLuas" />
+          <button onclick="hitungLuasLingkaran()">Hitung</button>
+          <p id="hasilLuasLingkaran"></p>
+          <p id="errorLuasLingkaran" class="error"></p>
+        </div>
+        <div>
+          <h3>Keliling</h3>
+          <label>Jari-jari:</label>
+          <input type="number" id="jariKeliling" />
+          <button onclick="hitungKelilingLingkaran()">Hitung</button>
+          <p id="hasilKelilingLingkaran"></p>
+          <p id="errorKelilingLingkaran" class="error"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="code.js"></script>
+</body>
+</html>
